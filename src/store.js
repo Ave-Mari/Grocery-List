@@ -6,6 +6,16 @@ const store = createStore({
             productsList: []
         }
     },
+    getters: {},
+    mutations: {
+        addProduct: (state, product) => {
+            state.productsList.push({
+                id: Math.random().toString(16).slice(2),
+                product: product,
+                completed: false
+            })
+        },
+    }
 
 
 })
