@@ -9,7 +9,9 @@
             <span :class="[product.completed ? 'completed' : 'uncompleted']">
                 {{ product.product }}
             </span>
-            <button>
+            <button
+            @click="markAsCompleted(product.id)"
+            >
                 Done
             </button>
             </li>
@@ -19,5 +21,18 @@
 </template>
 
 <script>
+export default {
+    name: "Products List",
+    data() {
+        return {
+            productsList: this.$store.state.productsList
+        }
+    },
+    methods: {
+        markAsCompleted(productId) {
+        this.$store.commit("markProduct", productId)
+    }
+    }
+}
 
 </script>
