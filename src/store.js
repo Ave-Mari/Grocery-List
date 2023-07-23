@@ -1,6 +1,6 @@
 import { createStore } from 'vuex';
 
-const store = createStore({ 
+const store = createStore({
     state() {
         return {
             productsList: []
@@ -9,6 +9,7 @@ const store = createStore({
     getters: {
         thisProduct: (state) => (productId) => {
             return state.productsList.find((product) => product.id === productId)
+        }
     },
     mutations: {
         addProduct: (state, product) => {
@@ -29,9 +30,6 @@ const store = createStore({
         }
     },
     
-    }
-
-
 })
 
 export default store;
