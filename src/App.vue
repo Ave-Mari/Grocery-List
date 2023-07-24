@@ -4,12 +4,20 @@
 </script>
 
 <template>
-      <AddProduct />
-      <ProductsList />
+    <main>
+        <AddProduct />
+        <ProductsList />
+    </main>
+     
 
 </template>
 
 <style lang="scss">
+
+main {
+    margin: 0 auto;
+    width: 500px;
+}
     
 
 </style>
