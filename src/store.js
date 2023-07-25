@@ -13,11 +13,11 @@ const store = createStore({
     },
     mutations: {
         addProduct: (state, product) => {
-            state.productsList.push({
+            state.productsList.unshift({
                 id: Math.random().toString(16).slice(2),
                 product: product,
                 completed: false
-            })
+            });
         },
         markProduct: (state, productId) => {
             let productIndex = state.productsList.find(product => product.id === productId);
